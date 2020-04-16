@@ -185,16 +185,16 @@
 
   const timeNodes = Array.from(document.querySelectorAll('[data-time]'));
 
-  // console.log(timeNodes );
   const seconds = timeNodes
   .map(node => node.dataset.time)
   .map(timeCode => {
     const [mins, secs] = timeCode.split(':') //separates minutes from seconds
     .map(parseFloat); //converts from strings to numbers
-      console.log(mins, secs);
+    return (mins * 60) + secs; //adds all the time together into seconds
   });
 
-  
+      console.log(seconds);
+
   
 
 </script>
