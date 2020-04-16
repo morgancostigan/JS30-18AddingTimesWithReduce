@@ -194,7 +194,14 @@
   })
   .reduce((total, vidSeconds) => total + vidSeconds);
 
-      console.log(seconds);
+  let secondsLeft = seconds;
+  const hours = Math.floor(seconds / 3600); //Math.floor cuts off anything after a decimal
+  secondsLeft = secondsLeft % 3600; //% is 'mod' or 'modulus', gives you the remainder
+  console.log(secondsLeft);
+  
+
+
+      // console.log(seconds);
 
   
 
