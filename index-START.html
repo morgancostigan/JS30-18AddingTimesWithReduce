@@ -191,7 +191,8 @@
     const [mins, secs] = timeCode.split(':') //separates minutes from seconds
     .map(parseFloat); //converts from strings to numbers
     return (mins * 60) + secs; //adds all the time together into seconds
-  });
+  })
+  .reduce((total, vidSeconds) => total + vidSeconds);
 
       console.log(seconds);
 
